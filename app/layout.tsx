@@ -24,11 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-white relative overflow-x-hidden">
+    <body className="bg-black text-white relative overflow-x-hidden">
 
-  <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-purple-600 opacity-30 blur-[200px] rounded-full"></div>
+  <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-purple-600 opacity-30 blur-[200px] rounded-full pointer-events-none"></div>
 
-  <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-blue-600 opacity-30 blur-[200px] rounded-full"></div>
+  <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-blue-600 opacity-30 blur-[200px] rounded-full pointer-events-none"></div>
 
   {children}
 </body>
