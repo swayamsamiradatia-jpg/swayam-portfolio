@@ -14,7 +14,9 @@ export default function Home() {
   <div className="flex gap-8 text-sm text-gray-400">
     <a href="#about" className="hover:text-white transition">About</a>
     <a href="#skills" className="hover:text-white transition">Skills</a>
+    <a href="#resume">Resume</a>  
     <a href="#projects" className="hover:text-white transition">Projects</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact" className="hover:text-white transition">Contact</a>
   </div>
 </nav>
@@ -191,16 +193,130 @@ export default function Home() {
       className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
     />
 
-    <button
+   <button
   type="submit"
-  className="w-full mt-4 bg-white text-black py-4 rounded-xl font-semibold text-lg transition hover:scale-105 active:scale-95"
+  className="w-full mt-4 bg-white text-black py-4 rounded-xl font-semibold text-lg transition active:scale-95 relative z-50"
 >
   Send Message →
 </button>
   </form>
 </section>
+    {/* RESUME SECTION */}
+<section id="resume" className="mt-40">
+  <h2 className="text-3xl font-semibold mb-12">Resume</h2>
 
+  <div className="bg-zinc-900/60 backdrop-blur-md p-8 rounded-2xl border border-zinc-800 shadow-xl">
 
+    <h3 className="text-xl font-semibold mb-2">
+      Swayam Samirbhai Adatia – CV
+    </h3>
+
+    <p className="text-gray-400 mb-6">
+      Diploma in Computer Engineering • Cybersecurity & Data Analysis
+    </p>
+
+    <div className="flex gap-4">
+      <a
+        href="/cv-swayam-adatia.pdf"
+        target="_blank"
+        className="px-5 py-2 rounded-lg bg-white text-black font-semibold"
+      >
+        View CV
+      </a>
+
+      <a
+        href="/cv-swayam-adatia.pdf"
+        download
+        className="px-5 py-2 rounded-lg border border-zinc-700"
+      >
+        Download CV
+      </a>
+    </div>
+
+  </div>
+</section>
+      {/* CERTIFICATIONS */}
+<section id="certifications" className="mt-40">
+  <h2 className="text-3xl font-semibold mb-12">Certifications</h2>
+
+  <div className="grid md:grid-cols-2 gap-8">
+
+    {/* Google Cloud */}
+    <div className="bg-zinc-900/60 backdrop-blur-md p-8 rounded-2xl border border-zinc-800 shadow-xl">
+      <h3 className="text-xl font-semibold mb-2">
+        Introduction to Security Principles in Cloud Computing
+      </h3>
+      <p className="text-gray-400 mb-4">
+        Google Cloud • Coursera • 2025
+      </p>
+      <a
+        href="https://coursera.org/verify/VHQ4V6FV2O0U"
+        target="_blank"
+        className="text-sm text-white border border-zinc-700 px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+      >
+        Verify Certificate →
+      </a>
+    </div>
+
+    {/* IBM */}
+    <div className="bg-zinc-900/60 backdrop-blur-md p-8 rounded-2xl border border-zinc-800 shadow-xl">
+      <h3 className="text-xl font-semibold mb-2">
+        Python for Data Science, AI & Development
+      </h3>
+      <p className="text-gray-400 mb-4">
+        IBM • Coursera • 2026
+      </p>
+      <a
+        href="https://coursera.org/verify/AQ9ANBYLYT01"
+        target="_blank"
+        className="text-sm text-white border border-zinc-700 px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+      >
+        Verify Certificate →
+      </a>
+    </div>
+
+    {/* Deloitte */}
+    <div className="bg-zinc-900/60 backdrop-blur-md p-8 rounded-2xl border border-zinc-800 shadow-xl">
+
+  <h3 className="text-xl font-semibold mb-2">
+    Deloitte – Data Analytics Job Simulation
+  </h3>
+
+  <p className="text-gray-400 mb-6">
+    Completed practical tasks in Data Analysis & Forensic Technology • 2025
+  </p>
+
+  <a
+    href="/deloitte-certificate.pdf"
+    target="_blank"
+    className="px-4 py-2 border border-zinc-700 rounded-lg"
+  >
+    View Certificate
+  </a>
+
+</div>
+    {/* EasySkill */}
+<div className="bg-zinc-900/60 backdrop-blur-md p-8 rounded-2xl border border-zinc-800 shadow-xl">
+
+  <img
+    src="/data-analysis-certificate.jpeg"
+    alt="Data Analysis Certificate"
+    className="rounded-xl mb-4"
+  />
+
+  <h3 className="text-xl font-semibold mb-2">
+    Data Analysis (A+ Grade)
+  </h3>
+
+  <p className="text-gray-400">
+    EasySkill Career Academy • 2025
+  </p>
+
+</div>
+</div>
+
+  
+</section>
     </main>
   );
 }
