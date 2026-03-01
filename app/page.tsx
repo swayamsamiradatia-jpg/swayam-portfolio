@@ -192,11 +192,11 @@ export default function Home() {
     />
 
     <button
-      type="submit"
-      className="border border-zinc-700 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition"
-    >
-      Send Message →
-    </button>
+  type="submit"
+  className="w-full mt-4 bg-white text-black py-4 rounded-xl font-semibold text-lg transition hover:scale-105 active:scale-95"
+>
+  Send Message →
+</button>
   </form>
 </section>
 
