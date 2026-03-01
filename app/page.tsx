@@ -157,8 +157,8 @@ export default function Home() {
   "service_7wsw0wj",
   "template_4lsakyv",
   {
-    from_name: name,
-    from_email: email,
+    name: name,
+    email: email,
     message: message,
   },
   "bluicW3lsCcovl_Az"
