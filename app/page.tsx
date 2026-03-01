@@ -154,16 +154,15 @@ export default function Home() {
       const emailjs = (await import("@emailjs/browser")).default;
 
       await emailjs.send(
-        "service_7wsw0wj",
-        "template_4lsakyv",
-        {
-          name,
-          email,
-          message,
-        },
-        "bluicW3lsCcovl_Az"
-      );
-
+  "service_7wsw0wj",
+  "template_4lsakyv",
+  {
+    from_name: name,
+    from_email: email,
+    message: message,
+  },
+  "bluicW3lsCcovl_Az"
+);
       alert("Message sent successfully 🚀");
       form.reset();
     }}
