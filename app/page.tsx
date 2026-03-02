@@ -41,6 +41,46 @@ export default function Home() {
           Aspiring Computer Science Student specializing in Cyber Security & Data Analysis.
         </motion.p>
       </section>
+      <div className="flex flex-wrap justify-center gap-6 mt-8">
+         {/* View Resume */}
+  <a
+    href="/cv-swayam-adatia.pdf"
+    target="_blank"
+    className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition"
+  >
+    👁 View Resume
+  </a>
+
+  {/* Download Resume */}
+  <a
+    href="/cv-swayam-adatia.pdf"
+    download
+    className="border border-purple-600 text-purple-400 px-6 py-3 rounded-xl font-semibold hover:bg-purple-600 hover:text-white transition"
+  >
+    ⬇ Download
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/swayam-adatia-a53978288"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-blue-600 transition font-medium"
+  >
+    <span>🔗 LinkedIn</span>
+  </a>
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/swayamsamiradatia-jpg"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-gray-800 transition font-medium"
+  >
+    <span>🐙 GitHub</span>
+  </a>
+
+</div>
 
       {/* ABOUT */}
 <section id="about" className="mt-40 max-w-3xl"> 
@@ -139,102 +179,6 @@ export default function Home() {
 
   </div>
 </section>
-{/* CONTACT */}
-<section id="contact" className="mt-40 max-w-3xl">
-  <h2 className="text-3xl font-semibold mb-8">Contact</h2>
-
-  <form
-    className="flex flex-col gap-6"
-    onSubmit={async (e) => {
-      e.preventDefault();
-
-      const form = e.target as HTMLFormElement;
-      const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-      const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-      const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
-
-      const emailjs = (await import("@emailjs/browser")).default;
-
-      await emailjs.send(
-  "service_7wsw0wj",
-  "template_4lsakyv",
-  {
-    name: name,
-    email: email,
-    message: message,
-  },
-  "bluicW3lsCcovl_Az"
-);
-      alert("Message sent successfully 🚀");
-      form.reset();
-    }}
-  >
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-      className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
-    />
-
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-      className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
-    />
-
-    <textarea
-      name="message"
-      placeholder="Your Message"
-      required
-      rows={5}
-      className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
-    />
-
-   <button
-  type="submit"
-  className="w-full mt-4 bg-white text-black py-4 rounded-xl font-semibold text-lg transition active:scale-95 relative z-50"
->
-  Send Message →
-</button>
-  </form>
-</section>
-    {/* RESUME SECTION */}
-<section id="resume" className="mt-40">
-  <h2 className="text-3xl font-semibold mb-12">Resume</h2>
-
-  <div className="bg-zinc-900/60 backdrop-blur-md p-8 rounded-2xl border border-zinc-800 shadow-xl">
-
-    <h3 className="text-xl font-semibold mb-2">
-      Swayam Samirbhai Adatia – CV
-    </h3>
-
-    <p className="text-gray-400 mb-6">
-      Diploma in Computer Engineering • Cybersecurity & Data Analysis
-    </p>
-
-    <div className="flex gap-4">
-      <a
-        href="/cv-swayam-adatia.pdf"
-        target="_blank"
-        className="px-5 py-2 rounded-lg bg-white text-black font-semibold"
-      >
-        View CV
-      </a>
-
-      <a
-        href="/cv-swayam-adatia.pdf"
-        download
-        className="px-5 py-2 rounded-lg border border-zinc-700"
-      >
-        Download CV
-      </a>
-    </div>
-
-  </div>
-</section>
       {/* CERTIFICATIONS */}
 <section id="certifications" className="mt-40">
   <h2 className="text-3xl font-semibold mb-12">Certifications</h2>
@@ -314,6 +258,68 @@ export default function Home() {
 
 </div>
 </div>
+</section>
+{/* CONTACT */}
+<section id="contact" className="mt-40 max-w-3xl">
+  <h2 className="text-3xl font-semibold mb-8">Contact</h2>
+
+  <form
+    className="flex flex-col gap-6"
+    onSubmit={async (e) => {
+      e.preventDefault();
+
+      const form = e.target as HTMLFormElement;
+      const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+      const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+      const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+      const emailjs = (await import("@emailjs/browser")).default;
+
+      await emailjs.send(
+  "service_7wsw0wj",
+  "template_4lsakyv",
+  {
+    name: name,
+    email: email,
+    message: message,
+  },
+  "bluicW3lsCcovl_Az"
+);
+      alert("Message sent successfully 🚀");
+      form.reset();
+    }}
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+      className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+      className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
+    />
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      required
+      rows={5}
+      className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl focus:outline-none"
+    />
+
+   <button
+  type="submit"
+  className="w-full mt-4 bg-white text-black py-4 rounded-xl font-semibold text-lg transition active:scale-95 relative z-50"
+>
+  Send Message →
+</button>
+  </form>
 
   
 </section>
