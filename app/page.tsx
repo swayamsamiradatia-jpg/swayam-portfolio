@@ -44,7 +44,7 @@ export default function Home() {
       <div className="flex flex-wrap justify-center gap-6 mt-8">
          {/* View Resume */}
   <a
-    href="/cv-swayam-adatia.pdf"
+    href="/newcv.pdf"
     target="_blank"
     className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition"
   >
@@ -53,7 +53,7 @@ export default function Home() {
 
   {/* Download Resume */}
   <a
-    href="/cv-swayam-adatia.pdf"
+    href="newcv.pdf"
     download
     className="border border-purple-600 text-purple-400 px-6 py-3 rounded-xl font-semibold hover:bg-purple-600 hover:text-white transition"
   >
